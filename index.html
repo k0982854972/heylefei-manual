@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="嘿樂肥第一版使用說明書：商家後台、客人下單、請款收款、出貨及常見問題。">
+<title>嘿樂肥｜第一版使用說明書</title>
+<style>
+:root{--ink:#233b32;--green:#285c48;--soft:#eaf0e5;--paper:#fffefa;--bg:#f3f2ec;--line:#dce3d7;--muted:#5e6e64;--gold:#9a6b2e;--warm:#faf1de}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;color:var(--ink);background:var(--bg);font:17px/1.85 -apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif}a{color:var(--green);text-underline-offset:4px}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.skip{position:absolute;left:16px;top:-100px;padding:10px;background:white;z-index:9}.skip:focus{top:10px}.topbar{max-width:1380px;margin:auto;padding:22px 30px;display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-weight:750;letter-spacing:.06em}.brand small{font-weight:400;color:var(--muted);margin-left:12px;font-size:13px}button{font:inherit;background:var(--green);color:white;padding:10px 18px;border:0;border-radius:8px;cursor:pointer}.shell{max-width:1380px;margin:auto;display:grid;grid-template-columns:245px minmax(0,1fr);gap:28px;padding:0 30px 60px}.sidebar{position:sticky;top:24px;align-self:start;max-height:92vh;overflow:auto;font-size:14px}.sidebar .label{font-size:12px;letter-spacing:.12em;color:var(--muted);margin:16px 10px 8px}.sidebar a{display:block;padding:8px 12px;text-decoration:none;border-left:2px solid transparent;border-radius:0 6px 6px 0}.sidebar a:hover{background:var(--soft);border-color:var(--green)}.menu-toggle{display:none}.sidebar .side-note{font-size:12px;color:var(--muted);padding:14px 12px;border-top:1px solid var(--line);margin-top:20px}main{min-width:0}.hero{padding:48px;background:var(--green);color:#fffef7;border-radius:18px}.eyebrow{font-size:12px;letter-spacing:.16em;font-weight:600;margin:0 0 16px}.hero h1{font-size:38px;line-height:1.4;margin:0 0 18px;letter-spacing:.04em}.hero .lead{max-width:680px;color:#eef3e9;font-size:19px}.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.chips span{font-size:12px;border:1px solid #72947d;padding:5px 12px;border-radius:30px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:20px 0}.quick a{display:block;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px}.quick strong{display:block;font-size:19px}.quick span{display:block;font-size:14px;color:var(--muted);margin-top:5px}.chapter{background:var(--paper);padding:34px 38px;border:1px solid var(--line);border-radius:14px;margin-top:22px}.chapter-head{display:flex;gap:15px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:22px}.number{color:var(--gold);font:600 14px/1.5 ui-monospace,monospace}.chapter h2{font-size:27px;line-height:1.5;margin:0}.chapter h3{font-size:21px;margin:28px 0 10px;line-height:1.6}.chapter h4{font-size:18px;margin:20px 0 8px}p{margin:12px 0 16px;overflow-wrap:anywhere}ul,ol{padding-left:26px}li{margin:8px 0}li::marker{color:var(--green);font-weight:650}.note{background:var(--soft);padding:16px 20px;border-left:4px solid #77947b;border-radius:0 8px 8px 0;margin:20px 0}.note.warm{background:var(--warm);border-color:#bf9554}.note p{margin:4px 0}.small{font-size:14px;color:var(--muted)}.path{font-size:14px;color:var(--muted);margin:5px 0 16px}.path b{font-weight:550;color:var(--green)}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{border:1px solid var(--line);border-radius:10px;padding:18px 20px;min-width:0}.card h3{margin-top:0}.card p:last-child{margin-bottom:0}.flow{padding:0;list-style:none;counter-reset:flow;display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.flow li{counter-increment:flow;flex:1 1 110px;background:var(--soft);padding:12px;border-radius:8px;font-size:14px;line-height:1.6;margin:0}.flow li::before{content:counter(flow,decimal-leading-zero);display:block;font:600 11px/1.6 ui-monospace,monospace;color:var(--muted);margin-bottom:5px}.table-wrap{overflow-x:auto;margin:18px 0}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.75}th,td{padding:13px 14px;text-align:left;vertical-align:top;border:1px solid var(--line);overflow-wrap:anywhere}th{background:var(--soft);font-weight:650}td:first-child{min-width:115px}strong{font-weight:700}details{border-bottom:1px solid var(--line);padding:15px 0}summary{cursor:pointer;font-weight:650;padding-right:12px}details p{padding:0 0 0 20px;color:var(--muted)}.footer{font-size:13px;color:var(--muted);padding:28px 5px}.end-link{display:inline-block;margin-top:20px;font-size:14px}.checklist{list-style:none;padding:0}.checklist li{padding-left:25px;position:relative}.checklist li::before{content:'□';position:absolute;left:0;color:var(--green)}
+@media(max-width:1050px){.shell{grid-template-columns:205px minmax(0,1fr);padding:0 20px 40px;gap:18px}.chapter{padding:28px}.hero{padding:34px}.two-col{grid-template-columns:1fr}}
+@media(max-width:780px){.menu-toggle:not([hidden]){display:block;width:100%;text-align:left;background:var(--paper);border:1px solid var(--line);color:var(--green)}.sidebar.is-collapsed nav{display:none}.shell{display:block;padding:0 16px 30px}.sidebar{position:static;max-height:none;margin-bottom:20px}.sidebar nav{display:grid;grid-template-columns:1fr 1fr;gap:3px}.sidebar .label{grid-column:1/-1;margin-top:10px}.sidebar .side-note{display:none}.topbar{padding:18px 16px;flex-wrap:wrap}.brand small{display:block;margin:0}.hero{padding:28px 24px}.hero h1{font-size:30px}.hero .lead{font-size:17px}.chapter{padding:25px 20px}.chapter h2{font-size:24px}.quick{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.table-wrap table{min-width:460px}.flow li{flex-basis:110px}body{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@page{size:A4;margin:16mm 14mm}
+@media print{html{scroll-behavior:auto}body{background:white;color:#172a22;font-size:10pt;line-height:1.65}.topbar,.sidebar,.skip,.quick,.end-link{display:none!important}.shell{display:block;margin:0;padding:0;max-width:none}.hero{border:1px solid #b9cbbf;background:#edf2e8!important;color:#233b32;border-radius:0;padding:22pt;print-color-adjust:exact;-webkit-print-color-adjust:exact}.hero h1{font-size:26pt}.hero .lead{color:#233b32;font-size:12pt}.chips span{border-color:#9cab9b;color:#233b32}.chapter{border:0;border-radius:0;padding:0;margin-top:22pt}.chapter-head{padding-bottom:8pt;margin-bottom:12pt;break-after:avoid}.chapter h2{font-size:17pt}.chapter h3{font-size:13pt;break-after:avoid}.chapter h4{font-size:11pt;break-after:avoid}p,li{orphans:3;widows:3}.table-wrap{overflow:visible}table,.table-wrap table{min-width:0!important;font-size:9pt}td,th{padding:6pt}td:first-child{min-width:0}thead{display:table-header-group}tr{break-inside:avoid}.two-col{display:block}.card{margin:10pt 0;break-inside:avoid}.note{break-inside:avoid;padding:10pt 12pt}.flow{display:flex}.flow li{font-size:9pt;flex-basis:85px}.small,.path{font-size:9pt}details{break-inside:avoid}details p{display:block!important}details>summary::marker{content:''}.footer{font-size:8pt}.note,th,.flow li{print-color-adjust:exact;-webkit-print-color-adjust:exact}a{text-decoration:none;color:inherit}}
+</style>
+</head>
+<body id="top">
+<a class="skip" href="#overview">跳到說明內容</a>
+<header class="topbar"><div class="brand">嘿樂肥 <small>HeyLeFei · 使用指南</small></div><button type="button" id="print">列印／儲存 PDF</button></header>
+<div class="shell">
+<aside class="sidebar"><button type="button" class="menu-toggle" id="menu-toggle" aria-controls="manual-nav" aria-expanded="true" hidden>章節目錄　展開／收合</button><nav id="manual-nav" aria-label="使用說明目錄">
+<p class="label">開始使用</p><a href="#overview">01　先了解訂單流程</a><a href="#start">02　登入與開始前設定</a>
+<p class="label">商家後台</p><a href="#dashboard">03　每日工作與功能導覽</a><a href="#catalog">04　商品、客戶與下單設定</a><a href="#orders">05　接單、備貨與請款</a><a href="#payment">06　付款需求與確認收款</a><a href="#shipment">07　出貨、列印與紀錄</a><a href="#correction">08　修改、取消與更正</a>
+<p class="label">客人操作與問題排除</p><a href="#customer">09　客人下單與查詢</a><a href="#notifications">10　LINE 通知與每日提醒</a><a href="#faq">11　常見問題與本版範圍</a>
+</nav><p class="side-note">第一版 · 2026.09.17<br>本說明書可離線閱讀。<br>實際登入、下單與查詢需連線。</p></aside>
+<main>
+<header class="hero"><p class="eyebrow">HEYLEFEI / USER MANUAL</p><h1>第一版使用說明書</h1><p class="lead">從商家接單、備貨與收款，到客人選購、付款回報與查單，依照日常工作一步步操作。</p><div class="chips"><span>商家管理</span><span>客人操作</span><span>備齊請款・收款後出貨</span></div></header>
+<div class="quick"><a href="#dashboard"><strong>我是店家／管理人員 →</strong><span>認識後台，處理接單、款項與出貨。</span></a><a href="#customer"><strong>我要了解客人的操作 →</strong><span>查看客人如何下單、回報付款與找回訂單。</span></a></div>
+<section class="chapter" id="overview"><div class="chapter-head"><span class="number">01</span><h2>先了解訂單流程</h2></div>
+<p>本說明書提供委託店家與使用人員閱讀，適用於目前第一版的新訂單流程。店家使用商家後台管理訂單；客人透過 LINE 入口選購與查看自己的訂單。</p>
+<div class="note"><strong>先備齊、再請款；確認足額收款後，才出貨。</strong><p>客人送出訂單不代表商家已接單，選擇付款方式或回報付款也不代表店家已收到錢。</p></div>
+<h3>全部是現貨的訂單</h3><ol class="flow" aria-label="現貨訂單流程"><li>客人送單</li><li>核對現貨<br>接單並請款</li><li>客人付款<br>回報付款</li><li>商家確認<br>足額收款</li><li>登記出貨</li></ol>
+<h3>需要製作，或現貨與製作商品一起下單</h3><ol class="flow" aria-label="製作與混合訂單流程"><li>客人送單</li><li>商家接單<br>製作／備貨</li><li>整筆備齊<br>再請款</li><li>客人付款<br>商家核款</li><li>登記出貨</li></ol>
+<p>兩種訂單請款後，都可使用當時開放的銀行轉帳或私人 LINE Pay。混合單採整張備齊、一次足額付款、一次整單出貨。</p>
+<div class="table-wrap"><table><thead><tr><th>看到的狀態</th><th>代表的意思</th><th>接下來由誰處理</th></tr></thead><tbody>
+<tr><td>待商家確認</td><td>客人已送出，商家尚未接單。</td><td>商家核對內容並決定是否接單。</td></tr>
+<tr><td>製作／備貨中</td><td>已接單，尚未整筆備齊並請款。</td><td>商家完成製作及備貨。</td></tr>
+<tr><td>備貨完成・待付款</td><td>已請款，等待客人付款及商家核款。</td><td>客人付款回報，商家核對。</td></tr>
+<tr><td>待確認款項</td><td>已回報付款，商家尚未確認入帳。</td><td>商家核對實際款項。</td></tr>
+<tr><td>已收款／待出貨</td><td>商家已確認足額收款。</td><td>商家安排實際出貨。</td></tr>
+<tr><td>已出貨</td><td>商家已登記寄出。</td><td>可查看出貨紀錄；不代表物流已送達。</td></tr>
+<tr><td>已取消</td><td>此筆訂單不再繼續處理，歷史仍保留。</td><td>需要重新購買時另建新訂單。</td></tr>
+</tbody></table></div><p class="small">頁面可能分別顯示訂單進度與收款狀態，請一起查看。較早建立的歷史訂單可能沿用原流程，不套用本節的新單順序。</p>
+</section>
+<section class="chapter" id="start"><div class="chapter-head"><span class="number">02</span><h2>登入與開始前設定</h2></div>
+<div class="two-col"><article class="card"><h3>店家／員工</h3><ol><li>使用管理者提供的<strong>員工入口</strong>，依畫面透過 LINE 登入。</li><li>首次使用若顯示待核准，請由管理員確認人員資格。</li><li>登入後確認自己的身分；看到的功能依權限而定。</li></ol><p class="small">員工帳號須完成核准及必要的 LINE 綁定。客戶登入不會自動取得員工權限。</p></article>
+<article class="card"><h3>購買商品的客人</h3><ol><li>從店家提供的<strong>客戶選購入口</strong>進入。</li><li>依畫面完成 LINE 登入／授權。</li><li>首次使用依提示填寫資料，再選品與下單。</li></ol><p class="small">請使用原本下單的 LINE 帳號查單；是否需再次授權，依當下登入狀態而定。</p></article></div>
+<h3>店家開始接單前，先確認這些項目</h3><ul class="checklist"><li>商品名稱、圖片、規格、單位與價格正確。</li><li>商品的公開展示、開放接單及供貨方式符合實際情況。</li><li>已設定固定運費；有銀行轉帳需求時，已填妥匯款資訊。</li><li>人員權限及提醒收件人已確認。</li><li>先用一筆標記清楚的測試單熟悉流程，試用時不進行真實付款或寄送。</li></ul>
+<p class="small">本版目前供試用與確認，正式營運入口由交付人員另行提供。試用期間入口與通知對象可能受限；無法進入時請聯絡管理者。</p>
+</section>
+<section class="chapter" id="dashboard"><div class="chapter-head"><span class="number">03</span><h2>每日工作與功能導覽</h2></div>
+<p class="path">入口：<b>管理首頁</b></p><p>登入後先查看每日工作總覽，點選待辦卡片前往對應清單。必要時按「重新整理」取得最新狀態。</p>
+<div class="two-col"><article class="card"><h3>先處理接單與備貨</h3><p>查看「待商家確認」和「製作／備貨中」，核對能否供應及哪些商品需要準備。</p></article><article class="card"><h3>再核對款項與出貨</h3><p>處理「待提供私人 LINE Pay QR Code」及「待確認款項」，查看今天與逾期待出貨。</p></article></div>
+<div class="table-wrap"><table><thead><tr><th>後台功能</th><th>什麼時候使用</th></tr></thead><tbody>
+<tr><td>訂單管理</td><td>搜尋訂單、接單、查看明細，或人工代客建立訂單。</td></tr><tr><td>待出貨</td><td>切換製作／備貨與各日期待出貨清單、查看商品彙整、列印備貨清單。</td></tr><tr><td>收款管理</td><td>查看已請款未收、待確認、已收款及待提供 QR Code 訂單。</td></tr><tr><td>客戶資料</td><td>維護聯絡資料，查詢客戶歷史訂單。</td></tr><tr><td>商品資料</td><td>管理商品內容、圖片、價格、接單及供貨方式。</td></tr><tr><td>下單設定</td><td>設定固定運費與銀行匯款資訊。</td></tr><tr><td>操作紀錄</td><td>查閱業務操作的時間、人員與內容。</td></tr><tr><td>通知紀錄／每日提醒</td><td>查閱訊息處理狀態，管理每日提醒收件人。</td></tr>
+</tbody></table></div><p>首頁「已請款未收金額」包含客人已回報、但商家尚未確認的款項；尚未請款與取消訂單不計入。管理員限定功能可能不會顯示在一般員工畫面。</p>
+</section>
+<section class="chapter" id="catalog"><div class="chapter-head"><span class="number">04</span><h2>商品、客戶與下單設定</h2></div>
+<h3>新增或修改商品</h3><p class="path">入口：<b>商品資料 → 新增商品／修改資料</b>（管理員）</p>
+<ol><li>填寫品名、商品編號、網址代稱、規格、單位、價格與說明，依需要上傳圖片。</li><li>設定是否公開展示及開放接單，兩者用途不同。</li><li>選擇「現貨供應」或「接單後製作」，可補充準備時間說明。</li><li>儲存後確認清單與客戶頁面顯示。</li></ol>
+<div class="note"><strong>供貨方式不是庫存數量。</strong><p>「現貨供應」仍需要店家確認實際數量；本版不會自動保留或扣除庫存。修改商品也不會直接改寫既有訂單的商品內容與價格。</p></div>
+<p class="small">不同商品／規格使用不同且不重複的商品編號。商品網址代稱一旦公開便不可再修改；欄位格式依畫面提示填寫。</p>
+<h3>維護客戶資料</h3><p class="path">入口：<b>客戶資料 → 新增客戶／修改資料</b></p><p>維護姓名、電話、地址及選填的 LINE 聯絡備註。可以搜尋姓名或電話，透過「查看歷史訂單」查閱該客戶的訂單。停用客戶會保留歷史紀錄。</p><p>LINE 聯絡備註只供人工辨識，不會自動綁定 LINE 帳號；姓名或電話相同，也不會自動合併成同一位客戶。</p>
+<h3>設定運費及銀行資訊</h3><p class="path">入口：<b>下單設定 → 儲存下單設定</b>（管理員）</p><ul><li><strong>固定運費：</strong>每張訂單使用設定金額，0 元代表免運。尚未設定時，客戶無法正常完成選品下單。</li><li><strong>銀行轉帳資訊：</strong>填寫銀行、分行、戶名、帳號與必要匯款說明。留白時，銀行轉帳選項停用。</li></ul>
+<p>匯款資訊於每次請款時保留當時版本。之後修改設定不會更新已請款訂單；需重開請款時，請依<a href="#correction">修改與更正流程</a>處理。</p>
+</section>
+<section class="chapter" id="orders"><div class="chapter-head"><span class="number">05</span><h2>接單、備貨與請款</h2></div>
+<p class="path">入口：<b>訂單管理 → 查看訂單</b></p>
+<h3>收到客人新單</h3><ol><li>找到待商家確認的訂單，核對商品、規格、數量、金額、收件資料及預計出貨日期。</li><li><strong>全現貨且數量充足：</strong>按「確認接單並請款」。</li><li><strong>需要製作、混合單或仍須準備：</strong>按「確認接單」，先進入製作／備貨。</li><li>無法承接時，開啟「無法接單」，填寫原因並按「拒絕接單」。請另行聯絡客人，這個動作不會自動發送拒絕接單的 LINE 訊息。</li></ol>
+<h3>整筆備齊後再請款</h3><p class="path">入口：<b>待出貨 → 製作／備貨中 → 核對備貨並請款</b></p><ol><li>查看備貨商品與數量，確認整張訂單都已備齊。</li><li>在訂單內填寫暫定出貨日期。</li><li>按「備貨完成並請款」，確認提示內容。</li><li>客人可在原訂單選擇付款方式；符合通知設定時，會發出備貨完成請款訊息。</li></ol>
+<div class="note"><p>預計出貨日是安排日期，不代表已寄出。收到款項後仍可確認或調整出貨安排；請勿在尚未寄出時登記已出貨。</p></div>
+<h3>人工代客建單</h3><p class="path">入口：<b>訂單管理 → 新增訂單</b></p><ol><li>先建立或選取客戶，核對本次收件資料。</li><li>加入商品、數量，核對金額、運費、日期與備註。</li><li>儲存訂單，再核對備貨、請款與收款。</li></ol><p>人工單同樣採備齊請款、足額收款後出貨。未連結客戶 LINE 身分的人工單，請商家另行聯絡，不要假定客人一定會收到系統通知。</p>
+</section>
+<section class="chapter" id="payment"><div class="chapter-head"><span class="number">06</span><h2>付款需求與確認收款</h2></div>
+<p class="path">入口：<b>收款管理</b></p><p>「全部未收款」包含已回報、尚待核款的訂單；「待確認款項」協助集中核對回報。「待提供 QR Code」是私人 LINE Pay 的人工協助待辦。</p>
+<div class="two-col"><article class="card"><h3>銀行轉帳</h3><ol><li>客人在已請款訂單選銀行轉帳，查看匯款資訊並付款。</li><li>客人回報付款，可填匯款帳號末五碼。</li><li>商家核對銀行實際入帳金額、時間及相關資料。</li><li>核對無誤後，在後台確認足額收款。</li></ol></article>
+<article class="card"><h3>私人 LINE Pay</h3><ol><li>客人選擇私人 LINE Pay，系統建立 QR Code 需求。</li><li>客人在官方聊天室提供訂單編號。</li><li>商家核對編號、客人與金額，人工傳送 QR Code，並按「已人工提供 QR Code」。</li><li>客人付款回報後，商家核對實際入帳，再確認收款。</li></ol></article></div>
+<div class="note warm"><strong>目前兩種方式都由商家人工核款。</strong><p>系統尚未自動查詢銀行或私人 LINE Pay 的款項，也不會自動產生、傳送私人收款 QR Code。「已人工提供 QR Code」只記錄提供動作，不代表已收款。</p></div>
+<h3>在後台確認足額收款</h3><ol><li>開啟要核對的訂單，先確認訂單編號與應付金額。</li><li>依實際款項選擇付款方式，填寫實收金額與實際付款時間；末五碼、交易參考資料可依需要補充。</li><li>實際付款時間以台灣時間填寫，應介於請款當分鐘與現在之間。</li><li>按「核對完成，確認足額收款」，再次確認提示。</li></ol><p>完成後，訂單顯示已收款並可安排出貨；符合設定時，客人會收到已收款通知。僅使用「僅回報付款，待核對」不會確認收款。</p>
+<p class="small">本版接受單張訂單一次足額收款。零元單、部分款、超額及合併款請交管理員人工核對，不要為了通過畫面而填寫不符實際的收款金額。</p>
+</section>
+<section class="chapter" id="shipment"><div class="chapter-head"><span class="number">07</span><h2>出貨、列印與紀錄</h2></div>
+<h3>安排並登記出貨</h3><p class="path">入口：<b>待出貨 → 核對並登記出貨</b></p><ol><li>查看今天、明天、未來或逾期的待出貨訂單。新流程訂單須備齊且已收款才會進入可出貨清單。</li><li>如需調整日期，於訂單內填「確認預計出貨日期」，按「儲存出貨安排」。</li><li>再次核對收件姓名、電話、地址、商品、數量與備註。</li><li><strong>實際寄出後</strong>填寫實際出貨時間、配送方式及選填物流單號，按「確認已出貨」。</li></ol>
+<p>出貨時間不可晚於現在；新流程也不得早於有效收款確認當分鐘。登記後訂單移出待出貨清單，客戶頁面更新為已出貨，並依設定發送通知。</p>
+<h3>補登物流單號或配送資訊</h3><p>在訂單的出貨紀錄開啟「補登配送資訊／修改備註」，修改後按「儲存配送資訊」。這裡不會變更商品、金額或原出貨時間，也不會向物流公司建立寄件單。</p>
+<h3>列印與儲存 PDF</h3><div class="table-wrap"><table><thead><tr><th>文件</th><th>適合用途</th><th>操作方式</th></tr></thead><tbody><tr><td>訂單明細</td><td>查看單張訂單的商品、金額及狀態。</td><td>在訂單開啟列印頁，按「列印／儲存 PDF」，於瀏覽器選印表機或儲存 PDF。</td></tr><tr><td>備貨核對清單</td><td>彙整符合條件的商品與規格數量，方便備貨。</td><td>在待出貨頁先設定分類／搜尋條件，再按「列印備貨清單」。</td></tr></tbody></table></div>
+<p>列印內容以產生當下為準，訂單修改後應重新列印。紙本勾選不會更新訂單或登記出貨；訂單明細不是發票或收款證明。</p>
+<h3>查閱歷程</h3><p>訂單內可查看收款、出貨及操作紀錄；管理員也可從「操作紀錄」查閱相關處理。更正前先看紀錄，避免把同一件事重複處理。</p>
+</section>
+<section class="chapter" id="correction"><div class="chapter-head"><span class="number">08</span><h2>修改、取消與更正</h2></div>
+<p>先確認訂單目前是否已請款、客人是否已付款、貨物是否真的寄出，再選擇處理方式。若按鈕沒有顯示，可能是目前狀態或登入權限不允許。</p>
+<div class="table-wrap"><table><thead><tr><th>遇到的情況</th><th>處理方式</th></tr></thead><tbody>
+<tr><td>尚未請款，需修改訂單</td><td>商家在可編輯的訂單按「修改訂單」，核對後儲存；若仍待審，先完成接單處理。</td></tr>
+<tr><td>已請款，客人尚未回報或付款</td><td>先聯絡確認未付款，開啟「撤回請款並重新備貨」，填原因並按「確認撤回請款」；修改後重新核對備貨並請款。</td></tr>
+<tr><td>已回報付款或已有有效收款</td><td>不能直接撤回請款。請先人工核對；已收款單不能直接改價或取消。</td></tr>
+<tr><td>需要取消未收款訂單</td><td>由管理員核對是否允許取消，填取消原因並確認；請另行聯絡客人。取消後保留紀錄，不能直接復原。</td></tr>
+<tr><td>誤登收款</td><td>管理員確認後使用「更正：作廢錯誤收款」，填原因再更正。這不會退款；需要退款請另行處理。</td></tr>
+<tr><td>誤登出貨</td><td>管理員確認貨物尚未真正寄出，再使用「更正：撤銷出貨登記」，填原因。新流程保留原收款；這不是退貨、退款或物流攔件。</td></tr>
+</tbody></table></div>
+<div class="note"><p>撤回請款後，客人原付款表單將失效。請客人重新開啟訂單，等待新的請款資訊；避免沿用舊資訊或重複付款。</p></div>
+<p class="small">部分已出貨歷史單保留舊有更正规則。若實際款項、配送與系統紀錄不一致，先交管理員核對，不要以多次更正操作代替真實退款或退貨處理。</p>
+</section>
+<section class="chapter" id="customer"><div class="chapter-head"><span class="number">09</span><h2>客人下單與查詢</h2></div>
+<p>以下是客人從 LINE 入口購買時的操作，可用於向客人說明。</p>
+<h3>① 選擇商品並確認收件資料</h3><ol><li>進入店家提供的客戶入口，依畫面完成 LINE 登入。</li><li>開啟「選品下單」，填寫想購買的數量。數量 0 表示不選購。</li><li>確認收件姓名、電話與完整地址，可填寫配送備註。</li><li>按「下一步：確認訂單」，核對商品、數量、運費、總額與預計出貨日期。</li><li>確認後按「確認送出，等待商家確認」，等待結果。</li></ol><p>修改本次收件資料不會更改先前訂單。送出期間按鈕可能暫時停用，請等待，不必連續點擊。</p>
+<h3>② 從「我的訂單」查看進度</h3><p>開啟「我的訂單」找到該筆訂單，再按「查看訂單」。商家處理後，可按「重新整理狀態」查看新進度。含需製作商品時，需等商家整筆備齊並請款才會出現付款方式。</p>
+<h3>③ 選擇付款方式並回報</h3><ol><li>於已請款的訂單選擇銀行轉帳或私人 LINE Pay，按「確認付款方式」。</li><li>銀行轉帳：依該筆訂單的匯款資訊完成轉帳。私人 LINE Pay：在官方聊天室提供訂單編號，等商家核對並提供 QR Code。</li><li><strong>完成付款後</strong>，回訂單按「我已付款，請商家核對」；銀行末五碼可選填。</li><li>等待商家核款，商家確認後才會顯示已收款。</li></ol>
+<div class="note warm"><strong>已付款但還顯示未收款？</strong><p>請先查看是否已回報，聯絡商家核對並提供訂單編號。不要因狀態尚未更新就再付一次。付款方式選定後若需更改，也請聯絡商家。</p></div>
+<h3>④ 查看出貨通知</h3><p>商家登記出貨後，訂單頁會顯示已出貨，並依通知設定透過官方 LINE 帳號發送訊息。可從通知中的連結回到訂單查看最新狀態。</p><p>需要改單、取消或調整收件資料時，請聯絡商家；客人目前不能自行在訂單內修改金額或取消訂單。</p>
+</section>
+<section class="chapter" id="notifications"><div class="chapter-head"><span class="number">10</span><h2>LINE 通知與每日提醒</h2></div>
+<div class="table-wrap"><table><thead><tr><th>通知對象</th><th>訊息用途</th></tr></thead><tbody><tr><td>該筆訂單的客人</td><td>接單備貨、接單請款或備貨完成請款、確認收款、出貨，以及適用的請款／收款更正通知。</td></tr><tr><td>符合提醒設定的店家人員</td><td>私人 LINE Pay QR Code 需求與每日待出貨摘要。</td></tr></tbody></table></div>
+<p>通知從官方 LINE 帳號發出。一般客人不會因為下單就收到商家內部提醒；同一 LINE 若同時具有客戶及員工身分，則可能收到兩種用途的訊息。</p>
+<h3>開啟員工每日提醒</h3><ol><li>確認人員已核准啟用、已綁定 LINE，並已加入店家官方帳號好友。</li><li>管理員開啟「每日提醒」，於收件人設定按「開啟提醒」。</li><li>系統通知功能也須啟用；若頁面顯示每日推送尚未啟用，請聯絡管理者處理。</li></ol>
+<p>每日以台灣時間 09:00 起處理今天、明天及逾期待出貨摘要；三項皆為零時不發送。這是工作提醒，不是自動催款。</p>
+<div class="note"><p>LINE 接受訊息不等於收件人已讀。通知可能稍後送達，請以訂單最新紀錄為準；通知失敗不會撤銷已完成的收款或出貨。試用期間只對指定身分發送。</p></div>
+</section>
+<section class="chapter" id="faq"><div class="chapter-head"><span class="number">11</span><h2>常見問題與本版範圍</h2></div>
+<details open><summary>為什麼銀行轉帳不能選？</summary><p>該次請款未包含匯款資訊。客人請聯絡商家；商家補存設定後，仍須在確認客人未付款且符合撤回條件時，撤回並重新請款，才會使用新的匯款資訊。</p></details>
+<details open><summary>為什麼不能出貨，或找不到待出貨訂單？</summary><p>新流程需已接單、整筆備齊並請款、確認足額收款。僅回報付款還不能出貨。先查訂單進度，再檢查日期與搜尋條件；製作中的訂單請切換「製作／備貨中」。</p></details>
+<details open><summary>送出後沒有結果，或網路中斷怎麼辦？</summary><p>先恢復連線，再從「我的訂單」或後台搜尋確認是否已成功儲存。不確定結果時不要立刻重建同一筆訂單；若出現資料已失效，重新載入並核對最新內容再操作。</p></details>
+<details open><summary>登入後找不到原本的訂單？</summary><p>確認使用當時下單的 LINE 帳號與客戶入口，再重新整理。仍找不到時，提供訂單編號請商家協助核對。</p></details>
+<details open><summary>為什麼我看不到商品設定、取消或更正按鈕？</summary><p>不同人員權限及訂單狀態會影響可用操作。請先確認目前登入身分；商品設定、取消與部分更正由管理員處理。</p></details>
+<details open><summary>為什麼沒有收到 LINE 通知？</summary><p>先確認訂單狀態是否已更新，再檢查是否使用正確帳號、已加入官方帳號好友及符合收件設定。商家可查看通知紀錄；試用期間另有指定名單限制。不要為了重發訊息而重做收款或出貨。</p></details>
+<details open><summary>網站突然無法開啟？</summary><p>先確認網路；目前試用服務可能受測試主機或入口調整影響。請向提供入口的窗口反映發生時間與錯誤畫面，等待確認後再操作。</p></details>
+<h3>第一版的使用範圍</h3><p>目前提供接單、備貨、人工核款、出貨登記、客戶查單及相關通知。以下尚未包含：自動庫存／效期管理、分批出貨、訂金或分期、線上金流自動入帳、物流自動下單、電子發票、自動退款，以及郵件自動對帳。</p><p>如有需要，可向交付窗口提出實際情境，確認後續調整範圍。版型、欄位說明與通知文字也可依店家需求討論。</p>
+<h3>回報問題時，請提供</h3><ul><li>出問題的畫面與大約時間。</li><li>當時操作步驟，以及預期看到的結果。</li><li>相關訂單編號、錯誤訊息或截圖。</li></ul><p class="small">請透過約定的聯絡窗口提供必要資料，不需提供密碼、驗證碼或完整付款帳號。</p><a class="end-link" href="#top">回到說明書頂端 ↑</a>
+</section>
+<footer class="footer">嘿樂肥 HeyLeFei｜第一版使用說明書 · 2026-09-17<br>適用目前試用版本；功能與入口以交付時說明為準。本文件可單獨傳送及離線閱讀，系統操作需連線。<noscript><br>如按鈕未啟用，請使用瀏覽器選單的「列印」儲存 PDF。</noscript></footer>
+</main></div>
+<script>
+(function(){
+  var menu=document.getElementById('menu-toggle');
+  var sidebar=document.querySelector('.sidebar');
+  menu.hidden=false;
+  if(window.matchMedia('(max-width:780px)').matches){sidebar.classList.add('is-collapsed');menu.setAttribute('aria-expanded','false');}
+  menu.addEventListener('click',function(){var closed=sidebar.classList.toggle('is-collapsed');menu.setAttribute('aria-expanded',String(!closed));});
+  var beforePrint=[];
+  window.addEventListener('beforeprint',function(){beforePrint=Array.from(document.querySelectorAll('details')).filter(function(el){return !el.open;});beforePrint.forEach(function(el){el.open=true;});});
+  window.addEventListener('afterprint',function(){beforePrint.forEach(function(el){el.open=false;});beforePrint=[];});
+  document.getElementById('print').addEventListener('click',function(){window.print();});
+})();
+</script>
+</body></html>
